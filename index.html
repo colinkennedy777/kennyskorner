@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kenny's Korner | Redington Beach, FL</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <img src="logo.png" alt="Kenny's Korner Logo" />
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#contact">Find Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="waves-top">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z" fill="#ffffff22"/>
+        <path d="M0,80 C360,20 720,140 1080,60 C1260,20 1380,80 1440,80 L1440,120 L0,120 Z" fill="#ffffff15"/>
+      </svg>
+    </div>
+    <div class="hero-content">
+      <img src="logo.png" alt="Kenny's Korner" class="hero-logo" />
+      <h1 class="hero-title">Kenny's Korner</h1>
+      <p class="hero-subtitle">Fresh Eats &bull; Good Vibes &bull; Redington Beach, FL</p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn btn-primary">See Our Menu</a>
+        <a href="#contact" class="btn btn-secondary">Find Us</a>
+      </div>
+    </div>
+    <div class="waves-bottom">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,100 720,0 1080,60 C1260,90 1380,30 1440,40 L1440,120 L0,120 Z" fill="#f5f0e8"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-tag">About Us</div>
+      <h2 class="section-title">A Little Slice of Beach Paradise</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Nestled right on beautiful Redington Beach, Kenny's Korner has been the go-to spot for locals and visitors who want fresh, delicious food without the fuss. We're a casual, family-friendly joint where the food is made with love and the views are always on point.</p>
+          <p>Whether you're grabbing a quick bite after a morning on the sand or settling in for a laid-back lunch, you'll feel the warm, welcoming vibe from the moment you walk in. Come as you are — flip flops welcome.</p>
+          <div class="about-badges">
+            <div class="badge">🐟 Fresh Seafood Daily</div>
+            <div class="badge">☀️ Beach-Side Dining</div>
+            <div class="badge">👨‍👩‍👧 Family Friendly</div>
+            <div class="badge">🍺 Ice Cold Drinks</div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="beach-card">
+            <div class="beach-card-icon">🦈</div>
+            <div class="beach-card-text">
+              <strong>Local Favorite</strong>
+              <span>Serving Redington Beach since the neighborhood was a secret</span>
+            </div>
+          </div>
+          <div class="beach-card">
+            <div class="beach-card-icon">🌊</div>
+            <div class="beach-card-text">
+              <strong>Steps from the Sand</strong>
+              <span>Come straight from the beach — we don't mind the sunscreen</span>
+            </div>
+          </div>
+          <div class="beach-card">
+            <div class="beach-card-icon">🍤</div>
+            <div class="beach-card-text">
+              <strong>Gulf Fresh</strong>
+              <span>Seafood sourced fresh from the Gulf of Mexico</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <div class="menu-bg-waves">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,20 1440,40 L1440,0 L0,0 Z" fill="#f5f0e8"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section-tag light">Our Menu</div>
+      <h2 class="section-title light">Catch of the Day (and More)</h2>
+      <div class="menu-tabs">
+        <button class="tab-btn active" data-tab="seafood">Seafood</button>
+        <button class="tab-btn" data-tab="sandwiches">Sandwiches</button>
+        <button class="tab-btn" data-tab="baskets">Baskets</button>
+        <button class="tab-btn" data-tab="drinks">Drinks</button>
+      </div>
+      <div class="menu-grid" id="menuGrid">
+        <!-- Seafood tab (default) -->
+        <div class="menu-item" data-category="seafood">
+          <div class="menu-item-header">
+            <span class="menu-item-name">Fried Shrimp Platter</span>
+            <span class="menu-item-price">$16.99</span>
+          </div>
+          <p class="menu-item-desc">Gulf shrimp, lightly breaded and golden fried. Served with coleslaw, fries, and cocktail sauce.</p>
+        </div>
+        <div class="menu-item" data-category="seafood">
+          <div class="menu-item-header">
+            <span class="menu-item-name">Fish &amp; Chips</span>
+            <span class="menu-item-price">$14.99</span>
+          </div>
+          <p class="menu-item-desc">Fresh-caught grouper in a crispy beer batter, served with seasoned fries and tartar sauce.</p>
+        </div>
+        <div class="menu-item" data-category="seafood">
+          <div class="menu-item-header">
+            <span class="menu-item-name">Crab Cake Platter</span>
+            <span class="menu-item-price">$18.99</span>
+          </div>
+          <p class="menu-item-desc">House-made crab cakes packed with real blue crab. Served with remoulade and two sides.</p>
+        </div>
+        <div class="menu-item" data-category="seafood">
+          <div class="menu-item-header">
+            <span class="menu-item-name">Clam Strips</span>
+            <span class="menu-item-price">$13.99</span>
+          </div>
+          <p class="menu-item-desc">Tender clam strips, breaded and fried to perfection. A Korner classic.</p>
+        </div>
+        <div class="menu-item" data-category="seafood">
+          <div class="menu-item-header">
+            <span class="menu-item-name">Scallop Platter</span>
+            <span class="menu-item-price">$19.99</span>
+          </div>
+          <p class="menu-item-desc">Sea scallops, pan-seared or fried your way. Served with choice of two sides.</p>
+        </div>
+        <div class="menu-item" data-category="seafood">
+          <div class="menu-item-header">
+            <span class="menu-item-name">Combo Platter</span>
+            <span class="menu-item-price">$21.99</span>
+          </div>
+          <p class="menu-item-desc">Can't decide? Get shrimp, fish, and clam strips together. Served with fries and slaw.</p>
+        </div>
+        <!-- Sandwiches tab -->
+        <div class="menu-item" data-category="sandwiches" style="display:none">
+          <div class="menu-item-header">
+            <span class="menu-item-name">Grouper Sandwich</span>
+            <span class="menu-item-price">$13.99</span>
+          </div>
+          <p class="menu-item-desc">Fresh Gulf grouper on a toasted hoagie. Blackened, grilled, or fried. With lettuce, tomato, and tartar.</p>
+        </div>
+        <div class="menu-item" data-category="sandwiches" style="display:none">
+          <div class="menu-item-header">
+            <span class="menu-item-name">Shrimp Po'Boy</span>
+            <span class="menu-item-price">$12.99</span>
+          </div>
+          <p class="menu-item-desc">Crispy fried shrimp piled high on a toasted French roll with remoulade and fresh veggies.</p>
+        </div>
+        <div class="menu-item" data-category="sandwiches" style="display:none">
+          <div class="menu-item-header">
+            <span class="menu-item-name">Crab Cake Sandwich</span>
+            <span class="menu-item-price">$14.99</span>
+          </div>
+          <p class="menu-item-desc">Our famous house crab cake on a brioche bun with Old Bay aioli and shredded lettuce.</p>
+        </div>
+        <div class="menu-item" data-category="sandwiches" style="display:none">
+          <div class="menu-item-header">
+            <span class="menu-item-name">Cheeseburger</span>
+            <span class="menu-item-price">$10.99</span>
+          </div>
+          <p class="menu-item-desc">Half-pound beef burger with American cheese, lettuce, tomato, onion, and your choice of condiments.</p>
+        </div>
+        <!-- Baskets tab -->
+        <div class="menu-item" data-category="baskets" style="display:none">
+          <div class="menu-item-header">
+            <span class="menu-item-name">Shrimp Basket</span>
+            <span class="menu-item-price">$11.99</span>
+          </div>
+          <p class="menu-item-desc">Fried Gulf shrimp with seasoned fries and cocktail sauce. A beach-day staple.</p>
+        </div>
+        <div class="menu-item" data-category="baskets" style="display:none">
+          <div class="menu-item-header">
+            <span class="menu-item-name">Fish Basket</span>
+            <span class="menu-item-price">$11.99</span>
+          </div>
+          <p class="menu-item-desc">Fried fish fillets with golden fries and tartar sauce. Simple and satisfying.</p>
+        </div>
+        <div class="menu-item" data-category="baskets" style="display:none">
+          <div class="menu-item-header">
+            <span class="menu-item-name">Chicken Tenders Basket</span>
+            <span class="menu-item-price">$10.99</span>
+          </div>
+          <p class="menu-item-desc">Hand-breaded chicken tenders with fries and honey mustard. The kids love 'em too.</p>
+        </div>
+        <div class="menu-item" data-category="baskets" style="display:none">
+          <div class="menu-item-header">
+            <span class="menu-item-name">Onion Ring Basket</span>
+            <span class="menu-item-price">$6.99</span>
+          </div>
+          <p class="menu-item-desc">Giant beer-battered onion rings. Add a dipping sauce and call it a meal.</p>
+        </div>
+        <!-- Drinks tab -->
+        <div class="menu-item" data-category="drinks" style="display:none">
+          <div class="menu-item-header">
+            <span class="menu-item-name">Beach Lemonade</span>
+            <span class="menu-item-price">$3.99</span>
+          </div>
+          <p class="menu-item-desc">Fresh-squeezed lemonade with a splash of strawberry. Ice cold and sunshine bright.</p>
+        </div>
+        <div class="menu-item" data-category="drinks" style="display:none">
+          <div class="menu-item-header">
+            <span class="menu-item-name">Sweet Tea</span>
+            <span class="menu-item-price">$2.99</span>
+          </div>
+          <p class="menu-item-desc">Southern-style sweet tea, brewed fresh daily. Free refills, because we're that kind of place.</p>
+        </div>
+        <div class="menu-item" data-category="drinks" style="display:none">
+          <div class="menu-item-header">
+            <span class="menu-item-name">Bottled Beer</span>
+            <span class="menu-item-price">$4.99</span>
+          </div>
+          <p class="menu-item-desc">Domestic and imported bottles — Bud Light, Corona, Yuengling, and more. Ask your server.</p>
+        </div>
+        <div class="menu-item" data-category="drinks" style="display:none">
+          <div class="menu-item-header">
+            <span class="menu-item-name">Soft Drinks</span>
+            <span class="menu-item-price">$2.49</span>
+          </div>
+          <p class="menu-item-desc">Coke, Diet Coke, Sprite, Root Beer, and more. Free refills all day.</p>
+        </div>
+      </div>
+      <p class="menu-note">* Menu items and prices subject to change. Ask your server about today's catch!</p>
+    </div>
+    <div class="menu-bg-waves bottom">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,0 720,80 1080,40 C1260,20 1380,60 1440,40 L1440,80 L0,80 Z" fill="#f5f0e8"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-tag">Happy Customers</div>
+      <h2 class="section-title">What People Are Saying</h2>
+      <div class="stars-row">
+        <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="rating-text">4.4 out of 5 on Google</span>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"Absolutely loved this place! The grouper sandwich was the best I've had on the beach strip. Super casual, friendly staff, and the food came out fast. Will definitely be back next time we're in Redington Beach!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">S</div>
+            <div>
+              <strong>Sandra M.</strong>
+              <span>Google Review</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"Hidden gem! We stumbled in after a morning at the beach and were blown away. The shrimp platter was massive and delicious. Great value for fresh seafood right on the beach. Highly recommend!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">J</div>
+            <div>
+              <strong>James T.</strong>
+              <span>Google Review</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+          <p class="review-text">"Great little spot for a casual lunch. The fish basket was perfectly fried and the fries were hot and crispy. Love that it's a quick walk from the beach. Friendly owners who really care about their food."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">M</div>
+            <div>
+              <strong>Maria L.</strong>
+              <span>Google Review</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"We eat here every time we visit Redington Beach. The crab cakes are outstanding — packed with real crab, not filler. The staff always remembers us and makes us feel like regulars. This is our family's tradition spot!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">R</div>
+            <div>
+              <strong>Robert K.</strong>
+              <span>Google Review</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"Best clam strips I've found in Florida — and I've been looking! Crispy, tender, and perfectly seasoned. The sweet tea was amazing too. This little place punches way above its weight class. Don't sleep on it!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">D</div>
+            <div>
+              <strong>Donna P.</strong>
+              <span>Google Review</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+          <p class="review-text">"Such a fun, laid-back atmosphere. Took the kids here after the beach and everyone loved it. The chicken tenders were a hit with the little ones and the adults got to enjoy fresh seafood. Perfect family spot!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">A</div>
+            <div>
+              <strong>Ashley W.</strong>
+              <span>Google Review</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS & INFO -->
+  <section class="hours-section" id="hours">
+    <div class="container">
+      <div class="hours-grid">
+        <div class="hours-card">
+          <div class="section-tag light small">Hours</div>
+          <h2 class="section-title light">We're Open!</h2>
+          <div class="hours-list">
+            <div class="hours-row">
+              <span>Monday – Thursday</span>
+              <span>11:00 AM – 8:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span>Friday – Saturday</span>
+              <span>11:00 AM – 9:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span>Sunday</span>
+              <span>11:00 AM – 8:00 PM</span>
+            </div>
+          </div>
+          <p class="hours-note">Hours may vary by season. Call ahead on holidays!</p>
+        </div>
+        <div class="hours-card">
+          <div class="section-tag light small">Good to Know</div>
+          <h2 class="section-title light">Dining Info</h2>
+          <div class="info-list">
+            <div class="info-row">
+              <span class="info-icon">🪑</span>
+              <span>Dine-in &amp; Takeout available</span>
+            </div>
+            <div class="info-row">
+              <span class="info-icon">💳</span>
+              <span>Cash and all major cards accepted</span>
+            </div>
+            <div class="info-row">
+              <span class="info-icon">🐾</span>
+              <span>Pet friendly on outdoor seating</span>
+            </div>
+            <div class="info-row">
+              <span class="info-icon">👧</span>
+              <span>Kids menu available</span>
+            </div>
+            <div class="info-row">
+              <span class="info-icon">🅿️</span>
+              <span>Free parking on site</span>
+            </div>
+            <div class="info-row">
+              <span class="info-icon">♿</span>
+              <span>Wheelchair accessible</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / FIND US -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-tag">Find Us</div>
+      <h2 class="section-title">Come Hang at the Korner</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-block">
+            <div class="contact-icon">📍</div>
+            <div>
+              <strong>Address</strong>
+              <p>17208 Gulf Blvd<br/>Redington Beach, FL 33708</p>
+            </div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-icon">📞</div>
+            <div>
+              <strong>Phone</strong>
+              <p><a href="tel:+17278668482">(727) 866-8482</a></p>
+            </div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-icon">🌐</div>
+            <div>
+              <strong>Find Us Online</strong>
+              <p>Search "Kenny's Korner Redington Beach" on Google Maps</p>
+            </div>
+          </div>
+          <a href="https://maps.google.com/?q=Kenny's+Korner+Redington+Beach+FL" target="_blank" class="btn btn-primary directions-btn">Get Directions &rarr;</a>
+        </div>
+        <div class="map-placeholder">
+          <div class="map-inner">
+            <div class="map-pin">📍</div>
+            <p><strong>Kenny's Korner</strong></p>
+            <p>17208 Gulf Blvd, Redington Beach</p>
+            <a href="https://maps.google.com/?q=Kenny's+Korner+Redington+Beach+FL" target="_blank" class="map-link">Open in Google Maps →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-waves">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,20 1440,40 L1440,0 L0,0 Z" fill="#f5f0e8"/>
+      </svg>
+    </div>
+    <div class="footer-content">
+      <img src="logo.png" alt="Kenny's Korner" class="footer-logo" />
+      <p class="footer-tagline">Kenny's Korner &mdash; Redington Beach, FL</p>
+      <p class="footer-address">17208 Gulf Blvd &bull; Redington Beach, FL 33708 &bull; (727) 866-8482</p>
+      <p class="footer-copy">&copy; 2025 Kenny's Korner. All rights reserved. 🌊</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
