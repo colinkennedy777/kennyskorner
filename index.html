@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kenny's Korner Restaurant | Redington Shores, FL</title>
-  <meta name="description" content="Voted #1 Breakfast on the Beach! Kenny's Korner Restaurant in Redington Shores, FL. Fresh breakfast & lunch daily 7am–3pm. Gulf Blvd's favorite morning spot." />
+  <meta name="description" content="Voted #1 Breakfast on the Beach! Kenny's Korner Restaurant in Redington Shores, FL. Fresh breakfast & lunch daily 7am–3pm." />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -28,23 +28,28 @@
 
   <!-- HERO -->
   <header class="hero">
+    <div class="hero-bg-bubbles">
+      <div class="bubble b1"></div>
+      <div class="bubble b2"></div>
+      <div class="bubble b3"></div>
+      <div class="bubble b4"></div>
+    </div>
     <div class="hero-content">
-      <div class="award-ribbon">&#127942; Voted #1 Breakfast on the Beach!</div>
+      <div class="award-ribbon">Voted #1 Breakfast on the Beach</div>
       <img src="logo.png" alt="Kenny's Korner" class="hero-logo" />
-      <h1 class="hero-title">Kenny's Korner</h1>
-      <p class="hero-subtitle">Breakfast &amp; Lunch &bull; Redington Shores, FL &bull; Gulf Blvd</p>
+      <p class="hero-subtitle">Breakfast &amp; Lunch &nbsp;&bull;&nbsp; Redington Shores, FL</p>
       <div class="hero-hours-pill">
         <span class="open-dot"></span>
-        Open Daily &nbsp;7:00 AM – 3:00 PM
+        Open Daily &nbsp;&mdash;&nbsp; 7:00 AM to 3:00 PM
       </div>
       <div class="hero-buttons">
         <a href="#menu" class="btn btn-primary">See Our Menu</a>
-        <a href="tel:+17273916811" class="btn btn-secondary">&#128222; Call Us</a>
+        <a href="tel:+17273916811" class="btn btn-secondary">Call Us</a>
       </div>
     </div>
     <div class="waves-bottom">
-      <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,50 C240,100 480,0 720,50 C960,100 1200,10 1440,50 L1440,100 L0,100 Z" fill="#f5f0e8"/>
+      <svg viewBox="0 0 1440 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,55 C180,110 360,0 540,55 C720,110 900,0 1080,55 C1260,110 1380,20 1440,55 L1440,110 L0,110 Z" fill="#f5f0e8"/>
       </svg>
     </div>
   </header>
@@ -59,32 +64,32 @@
           <p>Tucked right along the beautiful Gulf Boulevard in Redington Shores, Kenny's Korner has earned its reputation as the go-to breakfast and lunch spot on the beach. Whether you're fueling up before a morning swim or winding down after a walk on the sand, you'll find fresh, made-with-love food and the friendliest staff around.</p>
           <p>From scratch-made hollandaise and house-fresh crab cakes to hearty omelettes and the best French toast on the beach — every dish is crafted with care. Come as you are, flip flops welcome.</p>
           <div class="about-badges">
-            <div class="badge">&#127942; #1 Breakfast on the Beach</div>
-            <div class="badge">&#9733; 4.3 Stars on TripAdvisor</div>
-            <div class="badge">&#9749; Fresh Made Daily</div>
-            <div class="badge">&#128106; Family Friendly</div>
+            <div class="badge">#1 Breakfast on the Beach</div>
+            <div class="badge">4.3 Stars on TripAdvisor</div>
+            <div class="badge">Fresh Made Daily</div>
+            <div class="badge">Family Friendly</div>
           </div>
         </div>
         <div class="about-visual">
           <div class="beach-card">
-            <div class="beach-card-icon">&#129398;</div>
+            <div class="beach-card-icon-wrap icon-crab"></div>
             <div class="beach-card-text">
               <strong>House-Made Everything</strong>
               <span>Hollandaise made fresh every morning. Crab cakes made in-house daily.</span>
             </div>
           </div>
           <div class="beach-card">
-            <div class="beach-card-icon">&#127774;</div>
+            <div class="beach-card-icon-wrap icon-wave"></div>
             <div class="beach-card-text">
               <strong>Steps from the Gulf</strong>
               <span>Right on Gulf Blvd — come straight from the beach, sandy feet and all.</span>
             </div>
           </div>
           <div class="beach-card">
-            <div class="beach-card-icon">&#127919;</div>
+            <div class="beach-card-icon-wrap icon-star"></div>
             <div class="beach-card-text">
               <strong>Local Favorite</strong>
-              <span>Ranked #2 of 8 restaurants in Redington Shores with 400+ reviews.</span>
+              <span>Ranked top restaurant in Redington Shores with 400+ rave reviews.</span>
             </div>
           </div>
         </div>
@@ -102,164 +107,572 @@
     <div class="container">
       <div class="section-tag light">Our Menu</div>
       <h2 class="section-title light">Fresh. Scratch-Made. Delicious.</h2>
-      <div class="menu-tabs">
-        <button class="tab-btn active" data-tab="eggs">Eggs &amp; Classics</button>
-        <button class="tab-btn" data-tab="benedict">Eggs Benedict</button>
-        <button class="tab-btn" data-tab="avocado">Avocado Toast</button>
-        <button class="tab-btn" data-tab="sweeter">Sweeter Side</button>
-        <button class="tab-btn" data-tab="lunch">Lunch</button>
+
+      <!-- Meal Period Tabs -->
+      <div class="meal-tabs">
+        <button class="meal-tab active" data-meal="breakfast">Breakfast</button>
+        <button class="meal-tab" data-meal="lunch">Lunch</button>
+        <button class="meal-tab" data-meal="drinks">Drinks</button>
       </div>
-      <div class="menu-grid" id="menuGrid">
 
-        <!-- Eggs & Classics -->
-        <div class="menu-item" data-category="eggs">
-          <div class="menu-item-header">
-            <span class="menu-item-name">Biscuits &amp; Gravy</span>
-            <span class="menu-item-price">$11.95</span>
-          </div>
-          <p class="menu-item-desc">Biscuits with sausage gravy, two eggs any style, and choice of home fries or grits.</p>
+      <!-- ===== BREAKFAST ===== -->
+      <div class="meal-panel active" id="panel-breakfast">
+        <div class="menu-tabs">
+          <button class="tab-btn active" data-tab="b-specials">Specials</button>
+          <button class="tab-btn" data-tab="b-eggs">Eggs</button>
+          <button class="tab-btn" data-tab="b-omelettes">Omelettes</button>
+          <button class="tab-btn" data-tab="b-avocado">Avocado Toast</button>
+          <button class="tab-btn" data-tab="b-benedict">Eggs Benedict</button>
+          <button class="tab-btn" data-tab="b-sweeter">Sweeter Side</button>
+          <button class="tab-btn" data-tab="b-kids">Kids Menu</button>
+          <button class="tab-btn" data-tab="b-sides">Sides</button>
         </div>
-        <div class="menu-item" data-category="eggs">
-          <div class="menu-item-header">
-            <span class="menu-item-name">The Big Breakfast</span>
-            <span class="menu-item-price">$13.95</span>
-          </div>
-          <p class="menu-item-desc">Three eggs, two sausage, two bacon, two slices of ham, with choice of home fries or grits.</p>
-        </div>
-        <div class="menu-item" data-category="eggs">
-          <div class="menu-item-header">
-            <span class="menu-item-name">Omelettes</span>
-            <span class="menu-item-price">Market Price</span>
-          </div>
-          <p class="menu-item-desc">Made to order with your choice of fillings. Customers rave about the veggie omelette — perfectly seasoned and very filling.</p>
-        </div>
-        <div class="menu-item" data-category="eggs">
-          <div class="menu-item-header">
-            <span class="menu-item-name">Waffle Sandwich</span>
-            <span class="menu-item-price">$14.50</span>
-          </div>
-          <p class="menu-item-desc">Two eggs your way with sausage patties and American cheese folded between a waffle, drizzled with maple syrup and powdered sugar.</p>
-        </div>
-        <div class="menu-item" data-category="eggs">
-          <div class="menu-item-header">
-            <span class="menu-item-name">Belgian Waffle</span>
-            <span class="menu-item-price">Market Price</span>
-          </div>
-          <p class="menu-item-desc">Golden Belgian waffle served with fresh fruit. A breakfast classic done right.</p>
-        </div>
-        <div class="menu-item" data-category="eggs">
-          <div class="menu-item-header">
-            <span class="menu-item-name">Steak &amp; Eggs</span>
-            <span class="menu-item-price">Market Price</span>
-          </div>
-          <p class="menu-item-desc">Juicy steak cooked to order alongside eggs any style. Home fries or grits on the side.</p>
-        </div>
+        <div class="menu-grid">
 
-        <!-- Eggs Benedict -->
-        <div class="menu-item" data-category="benedict" style="display:none">
-          <div class="menu-item-header">
-            <span class="menu-item-name">Classic Benedict</span>
-            <span class="menu-item-price">Market Price</span>
+          <!-- Specials -->
+          <div class="menu-item" data-tab="b-specials">
+            <div class="menu-item-header"><span class="menu-item-name">Waffle Breakfast Sandwich</span><span class="menu-item-price">$14.50</span></div>
+            <p class="menu-item-desc">Two eggs your way with sausage patties, American cheese between a folded waffle, drizzled with maple syrup and powdered sugar.</p>
           </div>
-          <p class="menu-item-desc">Canadian bacon and poached eggs on an English muffin, topped with our scratch-made hollandaise — prepared fresh every single morning.</p>
-        </div>
-        <div class="menu-item popular" data-category="benedict" style="display:none">
-          <div class="menu-item-header">
-            <span class="menu-item-name">Lobster Benedict</span>
-            <span class="menu-item-price">Market Price</span>
+          <div class="menu-item" data-tab="b-specials">
+            <div class="menu-item-header"><span class="menu-item-name">Country Fried Chicken</span><span class="menu-item-price">$11.50</span></div>
+            <p class="menu-item-desc">Home breaded chicken served with our signature sausage gravy and a biscuit.</p>
           </div>
-          <p class="menu-item-desc">Poached eggs and tender lobster on an English muffin with fresh hollandaise. A guest favorite — "absolutely awesome" say our regulars.</p>
-          <span class="popular-tag">&#128293; Fan Favorite</span>
-        </div>
-        <div class="menu-item popular" data-category="benedict" style="display:none">
-          <div class="menu-item-header">
-            <span class="menu-item-name">Crab Cake Benedict</span>
-            <span class="menu-item-price">Market Price</span>
+          <div class="menu-item" data-tab="b-specials">
+            <div class="menu-item-header"><span class="menu-item-name">Maple Chicken Sandwich</span><span class="menu-item-price">$12.95</span></div>
+            <p class="menu-item-desc">Home breaded chicken on a toasted bun topped with caramelized onions, drizzled with maple syrup. Served with home fries.</p>
           </div>
-          <p class="menu-item-desc">Our house-made crab cake topped with poached eggs and fresh hollandaise. The crab cakes are made in-house — loaded with real crab.</p>
-          <span class="popular-tag">&#128293; Fan Favorite</span>
-        </div>
-        <div class="menu-item" data-category="benedict" style="display:none">
-          <div class="menu-item-header">
-            <span class="menu-item-name">Smoked Salmon Benedict</span>
-            <span class="menu-item-price">Market Price</span>
+          <div class="menu-item" data-tab="b-specials">
+            <div class="menu-item-header"><span class="menu-item-name">Chicken and Waffle</span><span class="menu-item-price">$13.95</span></div>
+            <p class="menu-item-desc">Home breaded chicken tenderloins served over a freshly made waffle topped with maple syrup and powdered sugar.</p>
           </div>
-          <p class="menu-item-desc">Silky smoked salmon, poached eggs, and scratch hollandaise on an English muffin. Light, fresh, and absolutely delicious.</p>
-        </div>
+          <div class="menu-item" data-tab="b-specials">
+            <div class="menu-item-header"><span class="menu-item-name">Burrito Steak Bowl</span><span class="menu-item-price">$18.95</span></div>
+            <p class="menu-item-desc">Two eggs your way over sauteed onions, peppers and potatoes, topped with diced steak and roasted red pepper cream.</p>
+          </div>
+          <div class="menu-item" data-tab="b-specials">
+            <div class="menu-item-header"><span class="menu-item-name">Stuffed Crepes</span><span class="menu-item-price">$12.50</span></div>
+            <p class="menu-item-desc">Ask your server about today's crepe filling.</p>
+          </div>
+          <div class="menu-item" data-tab="b-specials">
+            <div class="menu-item-header"><span class="menu-item-name">Soup of the Day — Beef Vegetable</span><span class="menu-item-price">$6.95</span></div>
+            <p class="menu-item-desc">Hearty homestyle beef vegetable soup. Ask your server for today's selection.</p>
+          </div>
 
-        <!-- Avocado Toast -->
-        <div class="menu-item popular" data-category="avocado" style="display:none">
-          <div class="menu-item-header">
-            <span class="menu-item-name">Avocado Toast with Lox</span>
-            <span class="menu-item-price">Market Price</span>
+          <!-- Eggs -->
+          <div class="menu-item" data-tab="b-eggs" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Breakfast #1</span><span class="menu-item-price">$7.95</span></div>
+            <p class="menu-item-desc">One egg any style, toast, and choice of home fries or grits.</p>
           </div>
-          <p class="menu-item-desc">Fresh avocado on toasted bread topped with premium smoked salmon (lox). A brunch classic elevated to a whole new level.</p>
-          <span class="popular-tag">&#128293; Must Try</span>
-        </div>
-        <div class="menu-item" data-category="avocado" style="display:none">
-          <div class="menu-item-header">
-            <span class="menu-item-name">Classic Avocado Toast</span>
-            <span class="menu-item-price">Market Price</span>
+          <div class="menu-item" data-tab="b-eggs" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Breakfast #2</span><span class="menu-item-price">$8.95</span></div>
+            <p class="menu-item-desc">Two eggs any style, toast, and choice of home fries or grits.</p>
           </div>
-          <p class="menu-item-desc">Ripe avocado smashed on toasted bread with your choice of toppings. Fresh, simple, and satisfying.</p>
-        </div>
+          <div class="menu-item" data-tab="b-eggs" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Biscuits N' Gravy</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Biscuits, sausage gravy, two eggs any style, and choice of home fries or grits.</p>
+          </div>
+          <div class="menu-item" data-tab="b-eggs" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Egg Sandwich</span><span class="menu-item-price">$9.95</span></div>
+            <p class="menu-item-desc">Fried egg, cheese, and choice of sausage, bacon, or ham on choice of toast.</p>
+          </div>
+          <div class="menu-item" data-tab="b-eggs" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Corned Beef Hash</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Corned beef hash, one egg any style, choice of home fries or grits and toast.</p>
+          </div>
+          <div class="menu-item popular" data-tab="b-eggs" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">The Big Breakfast</span><span class="menu-item-price">$13.95</span></div>
+            <p class="menu-item-desc">Three eggs, two pieces of sausage, two pieces of bacon, two slices of ham, served with your choice of home fries or grits.</p>
+            <span class="popular-tag">Fan Favorite</span>
+          </div>
+          <div class="menu-item" data-tab="b-eggs" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Huddle Bowl</span><span class="menu-item-price">$12.95</span></div>
+            <p class="menu-item-desc">Home fries, sausage gravy, two scrambled eggs, topped with shredded cheese and bacon.</p>
+          </div>
+          <div class="menu-item" data-tab="b-eggs" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Country Fried Steak</span><span class="menu-item-price">$14.95</span></div>
+            <p class="menu-item-desc">Classic country fried steak served with eggs and your choice of sides.</p>
+          </div>
+          <div class="menu-item" data-tab="b-eggs" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Steak and Eggs</span><span class="menu-item-price">$18.95</span></div>
+            <p class="menu-item-desc">Steak cooked to order alongside eggs any style. Served with choice of home fries or grits.</p>
+          </div>
 
-        <!-- Sweeter Side -->
-        <div class="menu-item popular" data-category="sweeter" style="display:none">
-          <div class="menu-item-header">
-            <span class="menu-item-name">French Toast</span>
-            <span class="menu-item-price">Market Price</span>
+          <!-- Omelettes -->
+          <div class="menu-item" data-tab="b-omelettes" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Vegetarian Omelette</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Fresh mushroom, onion, tomato, red pepper, and cheddar cheese.</p>
           </div>
-          <p class="menu-item-desc">Guests say it's "the best French toast on the beach." Thick, golden, perfectly custardy — you'll see why.</p>
-          <span class="popular-tag">&#128293; #1 Rated</span>
-        </div>
-        <div class="menu-item" data-category="sweeter" style="display:none">
-          <div class="menu-item-header">
-            <span class="menu-item-name">Stuffed French Toast</span>
-            <span class="menu-item-price">Market Price</span>
+          <div class="menu-item" data-tab="b-omelettes" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Avo Omelette</span><span class="menu-item-price">$12.95</span></div>
+            <p class="menu-item-desc">Avocado, bacon, spinach, and swiss cheese.</p>
           </div>
-          <p class="menu-item-desc">Thick-cut bread stuffed with sweet filling, griddled golden, and dusted with powdered sugar. Absolutely indulgent.</p>
-        </div>
-        <div class="menu-item" data-category="sweeter" style="display:none">
-          <div class="menu-item-header">
-            <span class="menu-item-name">Pancakes</span>
-            <span class="menu-item-price">Market Price</span>
+          <div class="menu-item" data-tab="b-omelettes" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">House Omelette</span><span class="menu-item-price">$12.95</span></div>
+            <p class="menu-item-desc">Spinach, fresh mushroom, and feta cheese.</p>
           </div>
-          <p class="menu-item-desc">Fluffy, golden pancakes. Add blueberries, chocolate chips, or keep it classic with butter and maple syrup.</p>
-        </div>
+          <div class="menu-item" data-tab="b-omelettes" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Western Omelette</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Ham, green pepper, onion, and cheddar cheese.</p>
+          </div>
+          <div class="menu-item" data-tab="b-omelettes" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Meat Lovers Omelette</span><span class="menu-item-price">$12.95</span></div>
+            <p class="menu-item-desc">Bacon, ham, sausage, and cheddar cheese.</p>
+          </div>
+          <div class="menu-item" data-tab="b-omelettes" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Build Your Own Omelette</span><span class="menu-item-price">$8.95</span></div>
+            <p class="menu-item-desc">Choose your own fillings and build the perfect omelette. Ask your server for available options.</p>
+          </div>
 
-        <!-- Lunch -->
-        <div class="menu-item" data-category="lunch" style="display:none">
-          <div class="menu-item-header">
-            <span class="menu-item-name">Chicken Sandwich</span>
-            <span class="menu-item-price">$12.95</span>
+          <!-- Avocado Toast -->
+          <div class="menu-item" data-tab="b-avocado" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Avocado Delight</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Two eggs and guacamole on 12-grain bread, served with fresh fruit.</p>
           </div>
-          <p class="menu-item-desc">Home-breaded chicken on a toasted bun with caramelized onions, drizzled with maple syrup. Served with home fries.</p>
-        </div>
-        <div class="menu-item" data-category="lunch" style="display:none">
-          <div class="menu-item-header">
-            <span class="menu-item-name">Turkey &amp; Avocado Club</span>
-            <span class="menu-item-price">$11.95</span>
+          <div class="menu-item" data-tab="b-avocado" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Avocado &amp; Cream Cheese</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Two eggs, guacamole, cream cheese, peppadew peppers on 12-grain bread, served with fresh fruit.</p>
           </div>
-          <p class="menu-item-desc">Roasted turkey breast, bacon, lettuce, avocado, and mayo. A lunch staple done with fresh, quality ingredients.</p>
-        </div>
-        <div class="menu-item" data-category="lunch" style="display:none">
-          <div class="menu-item-header">
-            <span class="menu-item-name">Salads</span>
-            <span class="menu-item-price">Market Price</span>
+          <div class="menu-item" data-tab="b-avocado" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Avocado, Bacon &amp; Goat Cheese</span><span class="menu-item-price">$12.95</span></div>
+            <p class="menu-item-desc">Two eggs, guacamole, bacon, goat cheese on 12-grain bread. Served with home fries.</p>
           </div>
-          <p class="menu-item-desc">Fresh salads available. Ask your server for today's options and add-ons.</p>
-        </div>
-        <div class="menu-item" data-category="lunch" style="display:none">
-          <div class="menu-item-header">
-            <span class="menu-item-name">Kids Menu</span>
-            <span class="menu-item-price">Market Price</span>
+          <div class="menu-item popular" data-tab="b-avocado" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Avocado &amp; Lox</span><span class="menu-item-price">$13.95</span></div>
+            <p class="menu-item-desc">Two eggs, guacamole, smoked salmon, lemon, capers, red onions on 12-grain bread. Served with fresh fruit.</p>
+            <span class="popular-tag">Must Try</span>
           </div>
-          <p class="menu-item-desc">Little ones are welcome! Kid-friendly breakfast and lunch options available. Ask your server.</p>
-        </div>
+          <div class="menu-item" data-tab="b-avocado" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Mango Salsa Toast</span><span class="menu-item-price">$12.95</span></div>
+            <p class="menu-item-desc">Two eggs, guacamole topped with mango salsa, served with fruit cup.</p>
+          </div>
 
+          <!-- Eggs Benedict -->
+          <div class="menu-item" data-tab="b-benedict" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Florentine Benedict</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Spinach, tomato, and hollandaise sauce on English muffin. Served with home fries or grits.</p>
+          </div>
+          <div class="menu-item popular" data-tab="b-benedict" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Smoked Salmon Benedict</span><span class="menu-item-price">$13.95</span></div>
+            <p class="menu-item-desc">Sliced salmon, lemon, capers, and hollandaise sauce on English muffin. Served with home fries or grits.</p>
+            <span class="popular-tag">Fan Favorite</span>
+          </div>
+          <div class="menu-item" data-tab="b-benedict" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Traditional Benedict</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Ham and hollandaise sauce on English muffin. Served with home fries or grits.</p>
+          </div>
+          <div class="menu-item popular" data-tab="b-benedict" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Crab Cake Benedict</span><span class="menu-item-price">$13.95</span></div>
+            <p class="menu-item-desc">Two house-made crab cakes on English muffin, topped with two poached eggs and hollandaise sauce. Served with home fries or grits.</p>
+            <span class="popular-tag">Must Try</span>
+          </div>
+          <div class="menu-item" data-tab="b-benedict" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Soft Shell Crab Benedict</span><span class="menu-item-price">$18.50</span></div>
+            <p class="menu-item-desc">Soft shell crab on English muffin with poached eggs and fresh hollandaise. Served with home fries or grits.</p>
+          </div>
+
+          <!-- Sweeter Side -->
+          <div class="menu-item popular" data-tab="b-sweeter" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">French Toast</span><span class="menu-item-price">$9.95</span></div>
+            <p class="menu-item-desc">Guests say it's "the best French toast on the beach." Classic, golden, and perfectly custardy.</p>
+            <span class="popular-tag">#1 Rated</span>
+          </div>
+          <div class="menu-item" data-tab="b-sweeter" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Stuffed French Toast</span><span class="menu-item-price">$9.95</span></div>
+            <p class="menu-item-desc">Banana, strawberry and chocolate hazelnut french toast topped with syrup and whipped cream.</p>
+          </div>
+          <div class="menu-item" data-tab="b-sweeter" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Pancakes</span><span class="menu-item-price">$9.95</span></div>
+            <p class="menu-item-desc">Three pancakes served with syrup.</p>
+          </div>
+          <div class="menu-item" data-tab="b-sweeter" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Short Stack</span><span class="menu-item-price">$6.95</span></div>
+            <p class="menu-item-desc">Two pancakes served with syrup.</p>
+          </div>
+          <div class="menu-item" data-tab="b-sweeter" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Belgium Waffle</span><span class="menu-item-price">$10.95</span></div>
+            <p class="menu-item-desc">Belgian waffle made to order, topped with fresh fruit, powdered sugar and whipped cream.</p>
+          </div>
+          <div class="menu-item" data-tab="b-sweeter" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Plain Waffle</span><span class="menu-item-price">$8.95</span></div>
+            <p class="menu-item-desc">Classic golden waffle served with butter and maple syrup.</p>
+          </div>
+
+          <!-- Kids Menu -->
+          <div class="menu-item" data-tab="b-kids" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Kid Pancake Breakfast</span><span class="menu-item-price">$5.99</span></div>
+            <p class="menu-item-desc">Two pancakes served with syrup and a cup of fruit.</p>
+          </div>
+          <div class="menu-item" data-tab="b-kids" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Kid Classic Breakfast</span><span class="menu-item-price">$5.99</span></div>
+            <p class="menu-item-desc">One egg your way, choice of bacon or sausage, and toast.</p>
+          </div>
+          <div class="menu-item" data-tab="b-kids" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Kid Grilled Cheese</span><span class="menu-item-price">$5.99</span></div>
+            <p class="menu-item-desc">On white bread with American cheese and a side of fries.</p>
+          </div>
+          <div class="menu-item" data-tab="b-kids" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Kid Chicken Tenders</span><span class="menu-item-price">$5.99</span></div>
+            <p class="menu-item-desc">Fried chicken tenders and a side of fries.</p>
+          </div>
+
+          <!-- Sides -->
+          <div class="menu-item" data-tab="b-sides" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Cup of Fruit</span><span class="menu-item-price">$4.95</span></div>
+            <p class="menu-item-desc">Fresh seasonal fruit.</p>
+          </div>
+          <div class="menu-item" data-tab="b-sides" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Bowl of Fruit</span><span class="menu-item-price">$6.95</span></div>
+            <p class="menu-item-desc">Large bowl of fresh seasonal fruit.</p>
+          </div>
+          <div class="menu-item" data-tab="b-sides" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Mozzarella Sticks</span><span class="menu-item-price">$5.00</span></div>
+            <p class="menu-item-desc">Golden fried mozzarella sticks with marinara.</p>
+          </div>
+          <div class="menu-item" data-tab="b-sides" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Onion Rings</span><span class="menu-item-price">$4.95</span></div>
+            <p class="menu-item-desc">Crispy battered onion rings.</p>
+          </div>
+          <div class="menu-item" data-tab="b-sides" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">French Fries</span><span class="menu-item-price">$3.95</span></div>
+            <p class="menu-item-desc">Golden seasoned fries.</p>
+          </div>
+          <div class="menu-item" data-tab="b-sides" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Tater Tots</span><span class="menu-item-price">$4.50</span></div>
+            <p class="menu-item-desc">Crispy golden tater tots.</p>
+          </div>
+          <div class="menu-item" data-tab="b-sides" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Home Fries</span><span class="menu-item-price">$2.95</span></div>
+            <p class="menu-item-desc">Seasoned home fries.</p>
+          </div>
+          <div class="menu-item" data-tab="b-sides" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Grits</span><span class="menu-item-price">$2.95</span></div>
+            <p class="menu-item-desc">Southern-style creamy grits.</p>
+          </div>
+          <div class="menu-item" data-tab="b-sides" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Bacon / Sausage / Ham</span><span class="menu-item-price">$3.50</span></div>
+            <p class="menu-item-desc">Choice of bacon, sausage, or ham as an add-on side.</p>
+          </div>
+          <div class="menu-item" data-tab="b-sides" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Biscuit</span><span class="menu-item-price">$2.00</span></div>
+            <p class="menu-item-desc">Freshly baked biscuit.</p>
+          </div>
+          <div class="menu-item" data-tab="b-sides" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Side Gravy</span><span class="menu-item-price">$3.95</span></div>
+            <p class="menu-item-desc">Side of our signature sausage gravy.</p>
+          </div>
+          <div class="menu-item" data-tab="b-sides" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Coleslaw</span><span class="menu-item-price">$3.10</span></div>
+            <p class="menu-item-desc">House-made creamy coleslaw.</p>
+          </div>
+          <div class="menu-item" data-tab="b-sides" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Bowl of Oatmeal</span><span class="menu-item-price">$2.95</span></div>
+            <p class="menu-item-desc">Warm bowl of oatmeal.</p>
+          </div>
+          <div class="menu-item" data-tab="b-sides" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Corned Beef Hash (Side)</span><span class="menu-item-price">$5.95</span></div>
+            <p class="menu-item-desc">Side portion of corned beef hash.</p>
+          </div>
+          <div class="menu-item" data-tab="b-sides" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Potato Salad</span><span class="menu-item-price">$3.50</span></div>
+            <p class="menu-item-desc">House-made potato salad.</p>
+          </div>
+
+        </div>
       </div>
-      <p class="menu-note">* Prices vary seasonally. Full menu with current prices available in-store or on DoorDash &amp; Uber Eats. Call us at (727) 391-6811.</p>
+
+      <!-- ===== LUNCH ===== -->
+      <div class="meal-panel" id="panel-lunch" style="display:none">
+        <div class="menu-tabs">
+          <button class="tab-btn active" data-tab="l-sandwiches">Sandwiches &amp; Wraps</button>
+          <button class="tab-btn" data-tab="l-salads">Salads</button>
+          <button class="tab-btn" data-tab="l-specials">Lunch Specials</button>
+        </div>
+        <div class="menu-grid">
+
+          <!-- Sandwiches -->
+          <div class="menu-item" data-tab="l-sandwiches">
+            <div class="menu-item-header"><span class="menu-item-name">Hamburger</span><span class="menu-item-price">$10.95</span></div>
+            <p class="menu-item-desc">Lettuce, tomato, onion, pickle, and mayo.</p>
+          </div>
+          <div class="menu-item" data-tab="l-sandwiches">
+            <div class="menu-item-header"><span class="menu-item-name">Black &amp; Bleu Burger</span><span class="menu-item-price">$12.95</span></div>
+            <p class="menu-item-desc">Lettuce, tomato, onion, bleu cheese.</p>
+          </div>
+          <div class="menu-item" data-tab="l-sandwiches">
+            <div class="menu-item-header"><span class="menu-item-name">Mushroom &amp; Swiss Burger</span><span class="menu-item-price">$12.95</span></div>
+            <p class="menu-item-desc">Mushroom, swiss cheese, lettuce, mayo.</p>
+          </div>
+          <div class="menu-item" data-tab="l-sandwiches">
+            <div class="menu-item-header"><span class="menu-item-name">BLT</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Bacon, lettuce, tomato, mayo.</p>
+          </div>
+          <div class="menu-item" data-tab="l-sandwiches">
+            <div class="menu-item-header"><span class="menu-item-name">Patty Melt</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Hamburger patty, melted swiss cheese, topped with caramelized onion on rye.</p>
+          </div>
+          <div class="menu-item" data-tab="l-sandwiches">
+            <div class="menu-item-header"><span class="menu-item-name">Turkey Club</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Roasted turkey breast, bacon, lettuce, avocado and mayo.</p>
+          </div>
+          <div class="menu-item" data-tab="l-sandwiches">
+            <div class="menu-item-header"><span class="menu-item-name">Reuben</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Corned beef, melted swiss, sauerkraut and thousand island on rye.</p>
+          </div>
+          <div class="menu-item" data-tab="l-sandwiches">
+            <div class="menu-item-header"><span class="menu-item-name">Hot Corned Beef</span><span class="menu-item-price">$10.95</span></div>
+            <p class="menu-item-desc">Corned beef served on grilled rye with our house mustard sauce.</p>
+          </div>
+          <div class="menu-item" data-tab="l-sandwiches">
+            <div class="menu-item-header"><span class="menu-item-name">The Beachcomber</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Stacked ham, swiss cheese, and coleslaw on grilled rye.</p>
+          </div>
+          <div class="menu-item" data-tab="l-sandwiches">
+            <div class="menu-item-header"><span class="menu-item-name">Monte Cristo</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Ham and cheese on white bread dipped in egg batter and fried, covered in powdered sugar. Served with syrup or preserves.</p>
+          </div>
+          <div class="menu-item" data-tab="l-sandwiches">
+            <div class="menu-item-header"><span class="menu-item-name">Veggie Wrap</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Lettuce, cucumber, green pepper, pepperoncini, sliced beets, feta cheese, and house dressing.</p>
+          </div>
+          <div class="menu-item" data-tab="l-sandwiches">
+            <div class="menu-item-header"><span class="menu-item-name">Chicken Caesar Wrap</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Romaine, grilled chicken breast, fresh parmesan cheese and caesar dressing.</p>
+          </div>
+          <div class="menu-item" data-tab="l-sandwiches">
+            <div class="menu-item-header"><span class="menu-item-name">Club Wrap</span><span class="menu-item-price">$12.95</span></div>
+            <p class="menu-item-desc">Lettuce, tomato, mayo, turkey, bacon, ham, swiss and American cheese.</p>
+          </div>
+
+          <!-- Salads -->
+          <div class="menu-item popular" data-tab="l-salads" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">House Salad</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Romaine, chopped pecans, sliced strawberries, blue cheese crumbles, drizzled with raspberry vinaigrette.</p>
+            <span class="popular-tag">Fan Favorite</span>
+          </div>
+          <div class="menu-item" data-tab="l-salads" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Garden Salad</span><span class="menu-item-price">$8.95</span></div>
+            <p class="menu-item-desc">Romaine, cucumber, tomato, onion, and shredded cheddar.</p>
+          </div>
+          <div class="menu-item" data-tab="l-salads" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Caesar Salad</span><span class="menu-item-price">$9.95</span></div>
+            <p class="menu-item-desc">Romaine, grated parmesan cheese, croutons, and caesar dressing.</p>
+          </div>
+          <div class="menu-item" data-tab="l-salads" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Chef's Salad</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Romaine, cucumber, green pepper, tomato, turkey, ham, boiled egg, swiss and American cheese.</p>
+          </div>
+          <div class="menu-item" data-tab="l-salads" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Saranda Salad</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Romaine, tomato, cucumber, pepperoncini, kalamata olives, sliced beets, green pepper, onion, topped with feta cheese.</p>
+          </div>
+          <div class="menu-item" data-tab="l-salads" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Bruschetta Salad w/ Steak</span><span class="menu-item-price">$18.95</span></div>
+            <p class="menu-item-desc">Fresh bruschetta-style salad topped with sliced steak.</p>
+          </div>
+
+          <!-- Lunch Specials -->
+          <div class="menu-item popular" data-tab="l-specials" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Blackened Shrimp Tacos</span><span class="menu-item-price">$14.95</span></div>
+            <p class="menu-item-desc">Blackened Gulf shrimp tacos — ask your server for today's toppings and fixings.</p>
+            <span class="popular-tag">Must Try</span>
+          </div>
+          <div class="menu-item" data-tab="l-specials" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Chorizo Quesadilla</span><span class="menu-item-price">$11.95</span></div>
+            <p class="menu-item-desc">Seasoned chorizo quesadilla served with your choice of dipping sauce.</p>
+          </div>
+          <div class="menu-item" data-tab="l-specials" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">French Dip</span><span class="menu-item-price">$14.95</span></div>
+            <p class="menu-item-desc">Sliced beef on a hoagie roll served with a side of au jus for dipping.</p>
+          </div>
+          <div class="menu-item popular" data-tab="l-specials" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Shrimp &amp; Grits</span><span class="menu-item-price">$15.95</span></div>
+            <p class="menu-item-desc">Gulf shrimp served over creamy southern-style grits. A true Gulf Coast classic.</p>
+            <span class="popular-tag">Fan Favorite</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ===== DRINKS ===== -->
+      <div class="meal-panel" id="panel-drinks" style="display:none">
+        <div class="menu-tabs">
+          <button class="tab-btn active" data-tab="d-na">Coffee &amp; NA</button>
+          <button class="tab-btn" data-tab="d-juice">Juice</button>
+          <button class="tab-btn" data-tab="d-soda">Soda</button>
+          <button class="tab-btn" data-tab="d-cocktails">Cocktails</button>
+          <button class="tab-btn" data-tab="d-beer">Beer</button>
+          <button class="tab-btn" data-tab="d-wine">Wine</button>
+        </div>
+        <div class="menu-grid">
+
+          <!-- NA Beverages -->
+          <div class="menu-item" data-tab="d-na">
+            <div class="menu-item-header"><span class="menu-item-name">Coffee</span><span class="menu-item-price">$3.00</span></div>
+            <p class="menu-item-desc">Hot brewed coffee.</p>
+          </div>
+          <div class="menu-item" data-tab="d-na">
+            <div class="menu-item-header"><span class="menu-item-name">Iced Coffee</span><span class="menu-item-price">$3.00</span></div>
+            <p class="menu-item-desc">Cold brewed iced coffee.</p>
+          </div>
+          <div class="menu-item" data-tab="d-na">
+            <div class="menu-item-header"><span class="menu-item-name">To-Go Large Coffee</span><span class="menu-item-price">$4.00</span></div>
+            <p class="menu-item-desc">Large coffee to take with you.</p>
+          </div>
+          <div class="menu-item" data-tab="d-na">
+            <div class="menu-item-header"><span class="menu-item-name">Iced Tea</span><span class="menu-item-price">$3.00</span></div>
+            <p class="menu-item-desc">Cold iced tea.</p>
+          </div>
+          <div class="menu-item" data-tab="d-na">
+            <div class="menu-item-header"><span class="menu-item-name">Hot Black Tea</span><span class="menu-item-price">$3.00</span></div>
+            <p class="menu-item-desc">Classic hot black tea.</p>
+          </div>
+          <div class="menu-item" data-tab="d-na">
+            <div class="menu-item-header"><span class="menu-item-name">Hot Green Tea</span><span class="menu-item-price">$3.00</span></div>
+            <p class="menu-item-desc">Hot green tea.</p>
+          </div>
+          <div class="menu-item" data-tab="d-na">
+            <div class="menu-item-header"><span class="menu-item-name">Homemade Lemonade</span><span class="menu-item-price">$2.95</span></div>
+            <p class="menu-item-desc">Fresh squeezed homemade lemonade.</p>
+          </div>
+          <div class="menu-item" data-tab="d-na">
+            <div class="menu-item-header"><span class="menu-item-name">Hot Chocolate</span><span class="menu-item-price">$3.00</span></div>
+            <p class="menu-item-desc">Rich hot chocolate.</p>
+          </div>
+          <div class="menu-item" data-tab="d-na">
+            <div class="menu-item-header"><span class="menu-item-name">Milk / Chocolate Milk</span><span class="menu-item-price">$3.00 / $3.95</span></div>
+            <p class="menu-item-desc">Cold glass of milk or chocolate milk.</p>
+          </div>
+          <div class="menu-item" data-tab="d-na">
+            <div class="menu-item-header"><span class="menu-item-name">San Pellegrino Water</span><span class="menu-item-price">$2.95</span></div>
+            <p class="menu-item-desc">Sparkling mineral water.</p>
+          </div>
+
+          <!-- Juice -->
+          <div class="menu-item" data-tab="d-juice" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Orange Juice</span><span class="menu-item-price">$3.75</span></div>
+            <p class="menu-item-desc">Fresh squeezed orange juice.</p>
+          </div>
+          <div class="menu-item" data-tab="d-juice" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Cranberry Juice</span><span class="menu-item-price">$3.75</span></div>
+            <p class="menu-item-desc">Cold cranberry juice.</p>
+          </div>
+          <div class="menu-item" data-tab="d-juice" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Apple Juice</span><span class="menu-item-price">$3.75</span></div>
+            <p class="menu-item-desc">Cold apple juice.</p>
+          </div>
+          <div class="menu-item" data-tab="d-juice" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Tomato Juice</span><span class="menu-item-price">$3.75</span></div>
+            <p class="menu-item-desc">Cold tomato juice.</p>
+          </div>
+          <div class="menu-item" data-tab="d-juice" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Grapefruit Juice</span><span class="menu-item-price">$3.75</span></div>
+            <p class="menu-item-desc">Cold grapefruit juice.</p>
+          </div>
+
+          <!-- Soda -->
+          <div class="menu-item" data-tab="d-soda" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Pepsi</span><span class="menu-item-price">$3.00</span></div>
+            <p class="menu-item-desc">Ice cold Pepsi.</p>
+          </div>
+          <div class="menu-item" data-tab="d-soda" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Diet Pepsi</span><span class="menu-item-price">$3.00</span></div>
+            <p class="menu-item-desc">Ice cold Diet Pepsi.</p>
+          </div>
+          <div class="menu-item" data-tab="d-soda" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Dr Pepper</span><span class="menu-item-price">$3.00</span></div>
+            <p class="menu-item-desc">Ice cold Dr Pepper.</p>
+          </div>
+          <div class="menu-item" data-tab="d-soda" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Mountain Dew</span><span class="menu-item-price">$3.00</span></div>
+            <p class="menu-item-desc">Ice cold Mountain Dew.</p>
+          </div>
+          <div class="menu-item" data-tab="d-soda" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Starry</span><span class="menu-item-price">$3.00</span></div>
+            <p class="menu-item-desc">Ice cold Starry lemon-lime soda.</p>
+          </div>
+
+          <!-- Cocktails -->
+          <div class="menu-item popular" data-tab="d-cocktails" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Bloody Mary</span><span class="menu-item-price">$6.00</span></div>
+            <p class="menu-item-desc">House-made Bloody Mary. The perfect beach morning starter.</p>
+            <span class="popular-tag">Brunch Staple</span>
+          </div>
+          <div class="menu-item" data-tab="d-cocktails" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Mimosa</span><span class="menu-item-price">$6.00</span></div>
+            <p class="menu-item-desc">Classic mimosa with champagne and orange juice.</p>
+          </div>
+          <div class="menu-item" data-tab="d-cocktails" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Bellini</span><span class="menu-item-price">$6.00</span></div>
+            <p class="menu-item-desc">Champagne and peach nectar. Light and refreshing.</p>
+          </div>
+          <div class="menu-item" data-tab="d-cocktails" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Screwdriver</span><span class="menu-item-price">$6.00</span></div>
+            <p class="menu-item-desc">Vodka and orange juice.</p>
+          </div>
+          <div class="menu-item" data-tab="d-cocktails" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Virgin Bloody Mary</span><span class="menu-item-price">$5.00</span></div>
+            <p class="menu-item-desc">All the flavor, none of the spirit.</p>
+          </div>
+          <div class="menu-item" data-tab="d-cocktails" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">House Champagne (Glass)</span><span class="menu-item-price">$10.00</span></div>
+            <p class="menu-item-desc">Glass of house champagne.</p>
+          </div>
+
+          <!-- Beer -->
+          <div class="menu-item" data-tab="d-beer" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Jai Alai (Can)</span><span class="menu-item-price">$5.00</span></div>
+            <p class="menu-item-desc">Cigar City Jai Alai IPA — a Florida classic.</p>
+          </div>
+          <div class="menu-item" data-tab="d-beer" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Guinness (Can)</span><span class="menu-item-price">$5.00</span></div>
+            <p class="menu-item-desc">Classic Guinness stout.</p>
+          </div>
+          <div class="menu-item" data-tab="d-beer" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Sun Cruiser (Can)</span><span class="menu-item-price">$5.00</span></div>
+            <p class="menu-item-desc">Sun Cruiser hard iced tea.</p>
+          </div>
+          <div class="menu-item" data-tab="d-beer" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Hard Cider (Can)</span><span class="menu-item-price">$7.00</span></div>
+            <p class="menu-item-desc">Crisp hard cider.</p>
+          </div>
+          <div class="menu-item" data-tab="d-beer" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">White Claw (Can)</span><span class="menu-item-price">$7.00</span></div>
+            <p class="menu-item-desc">White Claw hard seltzer.</p>
+          </div>
+          <div class="menu-item" data-tab="d-beer" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Coors Light / Miller Lite / Bud</span><span class="menu-item-price">$5.00</span></div>
+            <p class="menu-item-desc">Cold domestic bottles.</p>
+          </div>
+          <div class="menu-item" data-tab="d-beer" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Heineken / Blue Moon / Yuengling</span><span class="menu-item-price">$5.00</span></div>
+            <p class="menu-item-desc">Cold imported and craft bottles.</p>
+          </div>
+
+          <!-- Wine -->
+          <div class="menu-item" data-tab="d-wine" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">House Wine (Glass)</span><span class="menu-item-price">$6.00</span></div>
+            <p class="menu-item-desc">Ask your server for today's house wine selection.</p>
+          </div>
+          <div class="menu-item" data-tab="d-wine" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">Sangria (Glass)</span><span class="menu-item-price">$8.00</span></div>
+            <p class="menu-item-desc">House-made sangria. Fruity, light, and perfect for the beach.</p>
+          </div>
+          <div class="menu-item" data-tab="d-wine" style="display:none">
+            <div class="menu-item-header"><span class="menu-item-name">House Champagne (Glass)</span><span class="menu-item-price">$10.00</span></div>
+            <p class="menu-item-desc">Glass of house champagne.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Order Buttons -->
+      <div class="order-buttons">
+        <a href="https://order.toasttab.com/online/kennys-korner-restaurant-kennys-korner-restaurant" target="_blank" class="btn btn-order-pickup">Order Pickup</a>
+        <a href="https://www.ubereats.com/store/kennys-korner-restaurant/e5cYUo1AVFmTBm-dJwbanw" target="_blank" class="btn btn-order-delivery">Order Delivery</a>
+      </div>
+      <p class="menu-note">* Menu items and prices subject to change. Full current menu at ToastTab.</p>
+
     </div>
     <div class="menu-bg-waves bottom">
       <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -286,10 +699,7 @@
           <p class="review-text">"Kenny's has always had great food and friendly service — but after a long gap in visits we found they have gotten even better! The breakfast menu now includes all sorts of interesting dishes and they are cooked to perfection!"</p>
           <div class="reviewer">
             <div class="reviewer-avatar">T</div>
-            <div>
-              <strong>TripAdvisor Guest</strong>
-              <span>TripAdvisor Review</span>
-            </div>
+            <div><strong>TripAdvisor Guest</strong><span>TripAdvisor Review</span></div>
           </div>
         </div>
         <div class="review-card">
@@ -297,10 +707,7 @@
           <p class="review-text">"Had the smoked salmon Benedict and my husband had the lobster and crab cake eggs benedict — both were absolutely awesome. Hollandaise is made fresh every morning and you can tell. Outstanding breakfast spot!"</p>
           <div class="reviewer">
             <div class="reviewer-avatar">B</div>
-            <div>
-              <strong>Beach Visitor</strong>
-              <span>Google Review</span>
-            </div>
+            <div><strong>Beach Visitor</strong><span>Google Review</span></div>
           </div>
         </div>
         <div class="review-card">
@@ -308,10 +715,7 @@
           <p class="review-text">"The French toast is the best on the beach. I've been to just about every breakfast place in the area and nothing compares. The service is always quick and the staff is so friendly. This is our go-to every time we visit!"</p>
           <div class="reviewer">
             <div class="reviewer-avatar">K</div>
-            <div>
-              <strong>Karen M.</strong>
-              <span>Google Review</span>
-            </div>
+            <div><strong>Karen M.</strong><span>Google Review</span></div>
           </div>
         </div>
         <div class="review-card">
@@ -319,10 +723,7 @@
           <p class="review-text">"Perfectly seasoned home fries and a veggie omelet that hit the spot! The staff made the whole experience feel warm and welcoming with their attentive, friendly service. Exactly what you want after a morning at the beach."</p>
           <div class="reviewer">
             <div class="reviewer-avatar">J</div>
-            <div>
-              <strong>Jamie L.</strong>
-              <span>TripAdvisor Review</span>
-            </div>
+            <div><strong>Jamie L.</strong><span>TripAdvisor Review</span></div>
           </div>
         </div>
         <div class="review-card">
@@ -330,10 +731,7 @@
           <p class="review-text">"This place deserves 5 stars plus. Brilliant place!! The food is authentic and the flavors are incredible. Service is super friendly. One of the best breakfasts I've had in a long time — and I've had a lot of breakfasts!"</p>
           <div class="reviewer">
             <div class="reviewer-avatar">R</div>
-            <div>
-              <strong>Regular Guest</strong>
-              <span>TripAdvisor Review</span>
-            </div>
+            <div><strong>Regular Guest</strong><span>TripAdvisor Review</span></div>
           </div>
         </div>
         <div class="review-card">
@@ -341,17 +739,14 @@
           <p class="review-text">"Simple vegetarian omelette with wheat toast and home made fries — excellently seasoned and very filling. Price was totally reasonable and food came out shockingly quick. A hidden gem right on Gulf Blvd. Don't skip it!"</p>
           <div class="reviewer">
             <div class="reviewer-avatar">A</div>
-            <div>
-              <strong>Alex W.</strong>
-              <span>Google Review</span>
-            </div>
+            <div><strong>Alex W.</strong><span>Google Review</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- HOURS & INFO -->
+  <!-- HOURS -->
   <section class="hours-section" id="hours">
     <div class="container">
       <div class="hours-grid">
@@ -359,52 +754,28 @@
           <div class="section-tag light small">Hours</div>
           <h2 class="section-title light">We're Open!</h2>
           <div class="hours-list">
-            <div class="hours-row">
-              <span>Monday – Sunday</span>
-              <span class="hours-time">7:00 AM – 3:00 PM</span>
-            </div>
+            <div class="hours-row"><span>Sunday – Saturday</span><span class="hours-time">7:00 AM – 3:00 PM</span></div>
           </div>
-          <div class="hours-highlight">
-            <span>&#9749;</span>
-            <span>Serving Breakfast &amp; Lunch Daily</span>
-          </div>
+          <div class="hours-highlight">Serving Breakfast &amp; Lunch Every Day</div>
           <p class="hours-note">Hours may vary on holidays. Call ahead to confirm!</p>
         </div>
         <div class="hours-card">
           <div class="section-tag light small">Good to Know</div>
           <h2 class="section-title light">Dining Info</h2>
           <div class="info-list">
-            <div class="info-row">
-              <span class="info-icon">&#127860;</span>
-              <span>Dine-in &amp; Takeout available</span>
-            </div>
-            <div class="info-row">
-              <span class="info-icon">&#128666;</span>
-              <span>Delivery via DoorDash &amp; Uber Eats</span>
-            </div>
-            <div class="info-row">
-              <span class="info-icon">&#128179;</span>
-              <span>Cash and all major cards accepted</span>
-            </div>
-            <div class="info-row">
-              <span class="info-icon">&#128102;</span>
-              <span>Kids menu available</span>
-            </div>
-            <div class="info-row">
-              <span class="info-icon">&#128205;</span>
-              <span>Right on Gulf Blvd — easy to find</span>
-            </div>
-            <div class="info-row">
-              <span class="info-icon">&#9851;</span>
-              <span>Wheelchair accessible</span>
-            </div>
+            <div class="info-row"><div class="info-dot"></div><span>Dine-in &amp; Takeout available</span></div>
+            <div class="info-row"><div class="info-dot"></div><span>Delivery via DoorDash &amp; Uber Eats</span></div>
+            <div class="info-row"><div class="info-dot"></div><span>Cash and all major cards accepted</span></div>
+            <div class="info-row"><div class="info-dot"></div><span>Kids menu available</span></div>
+            <div class="info-row"><div class="info-dot"></div><span>Right on Gulf Blvd — easy to find</span></div>
+            <div class="info-row"><div class="info-dot"></div><span>Wheelchair accessible</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT / FIND US -->
+  <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-tag">Find Us</div>
@@ -412,41 +783,34 @@
       <div class="contact-grid">
         <div class="contact-info">
           <div class="contact-block">
-            <div class="contact-icon">&#128205;</div>
+            <div class="contact-icon-wrap ci-pin"></div>
             <div>
               <strong>Address</strong>
               <p>17702 Gulf Blvd<br/>Redington Shores, FL 33708</p>
             </div>
           </div>
           <div class="contact-block">
-            <div class="contact-icon">&#128222;</div>
+            <div class="contact-icon-wrap ci-phone"></div>
             <div>
               <strong>Phone</strong>
               <p><a href="tel:+17273916811">(727) 391-6811</a></p>
             </div>
           </div>
           <div class="contact-block">
-            <div class="contact-icon">&#128336;</div>
+            <div class="contact-icon-wrap ci-clock"></div>
             <div>
               <strong>Hours</strong>
-              <p>Daily: 7:00 AM – 3:00 PM</p>
+              <p>Sunday – Saturday: 7:00 AM – 3:00 PM</p>
             </div>
           </div>
-          <div class="contact-block">
-            <div class="contact-icon">&#127758;</div>
-            <div>
-              <strong>Order Online</strong>
-              <p>Available on DoorDash &amp; Uber Eats</p>
-            </div>
-          </div>
-          <a href="https://maps.google.com/?q=17702+Gulf+Blvd+Redington+Shores+FL+33708" target="_blank" class="btn btn-primary directions-btn">Get Directions &rarr;</a>
+          <a href="https://maps.google.com/?q=17702+Gulf+Blvd+Redington+Shores+FL+33708" target="_blank" class="btn btn-primary directions-btn">Get Directions</a>
         </div>
         <div class="map-placeholder">
           <div class="map-inner">
-            <div class="map-pin">&#128205;</div>
+            <div class="map-pin-icon"></div>
             <p><strong>Kenny's Korner Restaurant</strong></p>
             <p>17702 Gulf Blvd<br/>Redington Shores, FL 33708</p>
-            <a href="https://maps.google.com/?q=17702+Gulf+Blvd+Redington+Shores+FL+33708" target="_blank" class="map-link">Open in Google Maps &#8594;</a>
+            <a href="https://maps.google.com/?q=17702+Gulf+Blvd+Redington+Shores+FL+33708" target="_blank" class="map-link">Open in Google Maps</a>
           </div>
         </div>
       </div>
@@ -464,8 +828,8 @@
       <img src="logo.png" alt="Kenny's Korner" class="footer-logo" />
       <p class="footer-tagline">Kenny's Korner Restaurant</p>
       <p class="footer-address">17702 Gulf Blvd &bull; Redington Shores, FL 33708 &bull; (727) 391-6811</p>
-      <p class="footer-hours">Open Daily 7:00 AM – 3:00 PM</p>
-      <p class="footer-copy">&copy; 2025 Kenny's Korner Restaurant. All rights reserved. &#127754;</p>
+      <p class="footer-hours">Open Daily &mdash; Sunday through Saturday, 7:00 AM to 3:00 PM</p>
+      <p class="footer-copy">&copy; 2025 Kenny's Korner Restaurant. All rights reserved.</p>
     </div>
   </footer>
 

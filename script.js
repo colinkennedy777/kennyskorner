@@ -7,32 +7,43 @@ window.addEventListener('scroll', () => {
 // Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
-navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
-
-// Close mobile nav on link click
+navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
-// Menu tabs
-const tabBtns = document.querySelectorAll('.tab-btn');
-const menuItems = document.querySelectorAll('.menu-item');
-
-tabBtns.forEach(btn => {
+// Meal period tabs (Breakfast / Lunch / Drinks)
+const mealTabs = document.querySelectorAll('.meal-tab');
+mealTabs.forEach(btn => {
   btn.addEventListener('click', () => {
-    tabBtns.forEach(b => b.classList.remove('active'));
+    mealTabs.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
+    const meal = btn.dataset.meal;
+    document.querySelectorAll('.meal-panel').forEach(p => p.style.display = 'none');
+    document.getElementById('panel-' + meal).style.display = 'block';
+    // Trigger first sub-tab in the newly shown panel
+    const firstSubTab = document.querySelector('#panel-' + meal + ' .tab-btn');
+    if (firstSubTab) firstSubTab.click();
+  });
+});
 
-    const category = btn.dataset.tab;
-    menuItems.forEach(item => {
-      item.style.display = item.dataset.category === category ? 'block' : 'none';
+// Sub-category tabs within each meal panel
+document.querySelectorAll('.meal-panel').forEach(panel => {
+  const subTabs = panel.querySelectorAll('.tab-btn');
+  const items = panel.querySelectorAll('.menu-item');
+  subTabs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      subTabs.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const tab = btn.dataset.tab;
+      items.forEach(item => {
+        item.style.display = item.dataset.tab === tab ? 'block' : 'none';
+      });
     });
   });
 });
 
-// Animate elements on scroll
+// Scroll animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -40,9 +51,9 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.style.transform = 'translateY(0)';
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.08 });
 
-document.querySelectorAll('.beach-card, .menu-item, .review-card, .contact-block').forEach(el => {
+document.querySelectorAll('.beach-card, .review-card, .contact-block, .hours-card').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(20px)';
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
