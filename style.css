@@ -823,6 +823,213 @@ body {
 }
 .map-link:hover { background: var(--ocean-dark); transform: translateY(-2px); }
 
+/* ===== CAROUSEL ===== */
+.carousel-outer {
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 48px;
+  margin-top: 8px;
+}
+.carousel-track {
+  display: flex;
+  gap: 24px;
+  padding: 16px 40px 8px;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: grab;
+  user-select: none;
+}
+.carousel-track:active { cursor: grabbing; }
+.carousel-track .review-card {
+  min-width: 340px;
+  max-width: 340px;
+  flex-shrink: 0;
+}
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 20px;
+}
+.carousel-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--sand-dark);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s;
+  padding: 0;
+}
+.carousel-dot.active {
+  background: var(--ocean);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* Fade edges */
+.carousel-outer::before,
+.carousel-outer::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 48px;
+  width: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+.carousel-outer::before { left: 0; background: linear-gradient(to right, var(--sand), transparent); }
+.carousel-outer::after  { right: 0; background: linear-gradient(to left, var(--sand), transparent); }
+
+/* ===== GIFT CARDS & MERCH ===== */
+.gifts-merch {
+  background: linear-gradient(135deg, var(--ocean-dark) 0%, var(--ocean) 100%);
+  padding: 80px 0;
+  position: relative;
+}
+.gifts-merch-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.gm-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 24px;
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.gm-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.2); }
+.gm-icon { font-size: 2.8rem; line-height: 1; }
+.gm-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  color: white;
+  line-height: 1.1;
+}
+.gm-desc { font-size: 0.97rem; color: rgba(255,255,255,0.82); line-height: 1.65; }
+
+.gift-amounts {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 4px 0;
+}
+.gift-pill {
+  background: rgba(255,255,255,0.18);
+  border: 2px solid rgba(255,255,255,0.4);
+  color: white;
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 8px 20px;
+  border-radius: 50px;
+  transition: all 0.2s;
+}
+.gift-pill:hover { background: rgba(255,255,255,0.3); }
+
+.merch-items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 4px 0;
+}
+.merch-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 10px 16px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.merch-name { color: white; font-weight: 700; font-size: 0.97rem; }
+.merch-price { color: var(--sun); font-weight: 800; font-size: 1rem; }
+
+.btn-gift {
+  background: white;
+  color: var(--ocean-dark);
+  margin-top: 4px;
+  font-size: 0.97rem;
+  padding: 12px 28px;
+}
+.btn-gift:hover { background: var(--sand); transform: translateY(-2px); }
+.btn-merch {
+  background: var(--sun-warm);
+  color: white;
+  margin-top: 4px;
+  font-size: 0.97rem;
+  padding: 12px 28px;
+  box-shadow: 0 4px 16px rgba(245,166,35,0.4);
+}
+.btn-merch:hover { background: #d88a10; transform: translateY(-2px); }
+
+/* ===== MAP EMBED ===== */
+.map-embed {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4/3;
+  border: 3px solid rgba(42,143,189,0.2);
+}
+.map-embed iframe { display: block; width: 100%; height: 100%; border: none; }
+
+/* ===== FLOATING ORDER BUTTON ===== */
+.fab-order {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+.fab-order.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+.fab-order a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--coral);
+  color: white;
+  text-decoration: none;
+  padding: 14px 22px;
+  border-radius: 50px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  box-shadow: 0 6px 24px rgba(232,102,61,0.55), 0 2px 8px rgba(0,0,0,0.2);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.fab-order a:hover {
+  background: var(--coral-light);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(232,102,61,0.65);
+}
+.fab-icon { font-size: 1.2rem; }
+.fab-label { letter-spacing: 0.3px; }
+
+/* pulse ring around FAB */
+.fab-order a::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50px;
+  border: 2px solid rgba(232,102,61,0.5);
+  animation: fabPulse 2.5s ease-out infinite;
+}
+@keyframes fabPulse {
+  0%   { transform: scale(1);   opacity: 0.8; }
+  100% { transform: scale(1.18); opacity: 0; }
+}
+
 /* ===== FOOTER ===== */
 .footer { background: var(--navy); position: relative; }
 .footer-waves { line-height: 0; }
@@ -852,7 +1059,10 @@ body {
   .about-grid, .hours-grid, .contact-grid { grid-template-columns: 1fr; }
   .about-grid { gap: 32px; }
   .hours-card { padding: 24px; }
-  .map-placeholder { aspect-ratio: 16/9; min-height: 200px; }
+  .map-embed { aspect-ratio: 16/9; min-height: 200px; }
+  .gifts-merch-grid { grid-template-columns: 1fr; }
+  .carousel-track .review-card { min-width: 290px; max-width: 290px; }
+  .fab-order { bottom: 16px; right: 16px; }
   .reviews-grid { grid-template-columns: 1fr; }
   .meal-tabs { gap: 8px; }
   .menu-tabs { gap: 5px; }
